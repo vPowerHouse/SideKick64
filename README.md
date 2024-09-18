@@ -91,5 +91,4 @@ type // 0        1     2        3            4           5       6
     Used, MarkTick, AcculmTick: Uint64;
     Icon: TIcon;
   end;
-  ````
-  It has two inputs: Set (S) and Reset ®,
+  ```
