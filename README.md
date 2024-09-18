@@ -92,4 +92,4 @@ type // 0        1     2        3            4           5       6
     Icon: TIcon;
   end;
   ````
-  It has two inputs: Set (S) and Reset ®,
+  It has two inputs: Set (S) and Reset Â®,
