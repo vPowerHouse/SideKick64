@@ -11,15 +11,16 @@ uses
   Winapi.Windows,
   fmSideKick64 in 'fmSideKick64.pas' {SideKick},
   Vcl.Themes,
-  Vcl.Styles;
-//  Unit2 in 'Unit2.pas' {Form2};
+  Vcl.Styles,
+  fmSettings in 'fmSettings.pas' {SettingsForm},
+  SKLeader in 'SKLeader.pas';
 
 {$R *.res}
 
 var
-  Hnd: THandle = 0;
+  Hnd: HWnd = 0;
+//  SubApp: TAuxSKBoss;
 begin
-
   Hnd := FindWindow('TSideKick', pchar('SideKick'));
   if Hnd <> 0 then
   begin
@@ -32,9 +33,11 @@ begin
   ReportMemoryLeaksOnShutdown := DEBUG_PROCESS > 0;
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
-  TStyleManager.TrySetStyle('Windows10 Dark');
+  TStyleManager.TrySetStyle('Windows10 Green');
   Application.CreateForm(TSideKick, SideKick);
-//  Application.CreateForm(TForm2, Form2);
-  SideKick.ScaleBy(96, 72);
+ // Application.CreateForm(TSettingsForm, SettingsForm);
+  //  Application.CreateForm(TForm2, Form2);
+  SideKick.ScaleBy(96,72);// //1.15 vs 1.33
+//  SubApp:= TAuxSKBoss.InitiateBoss(SideKick, SettingsForm);
   Application.Run;
 end.

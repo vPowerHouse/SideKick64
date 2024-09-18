@@ -1,8 +1,8 @@
 object SideKick: TSideKick
   Left = 0
   Top = 0
-  Caption = 'SideKick'
-  ClientHeight = 599
+  Caption = 'SideKick64'
+  ClientHeight = 832
   ClientWidth = 815
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -26,19 +26,17 @@ object SideKick: TSideKick
     RowCount = 1
     FixedRows = 0
     TabOrder = 0
-    ExplicitWidth = 809
   end
   object Log: TMemo
     Left = 0
     Top = 281
     Width = 815
-    Height = 318
-    Align = alClient
-    Lines.Strings = (
-      'Log')
+    Height = 232
+    Align = alTop
     TabOrder = 1
-    ExplicitWidth = 809
-    ExplicitHeight = 301
+    WordWrap = False
+    ExplicitLeft = 2
+    ExplicitTop = 605
   end
   object FlowPanel1: TFlowPanel
     Left = 0
@@ -50,47 +48,46 @@ object SideKick: TSideKick
     BevelOuter = bvNone
     Padding.Left = 2
     TabOrder = 2
-    ExplicitWidth = 809
-    object Load: TButton
+    object btnLoad: TButton
       Left = 2
       Top = 0
-      Width = 75
+      Width = 64
       Height = 25
       Caption = 'Load'
       TabOrder = 0
-      OnClick = LoadClick
+      OnClick = btnLoadClick
     end
     object More: TButton
-      Left = 77
+      Left = 66
       Top = 0
-      Width = 75
+      Width = 64
       Height = 25
       Caption = 'More'
       TabOrder = 1
-      OnClick = MoreClick
+      OnClick = MoreLessClick
     end
     object Less: TButton
-      Left = 152
+      Left = 130
       Top = 0
-      Width = 75
+      Width = 64
       Height = 25
       Caption = 'Less'
       TabOrder = 2
-      OnClick = MoreClick
+      OnClick = MoreLessClick
     end
     object Available: TButton
-      Left = 227
+      Left = 194
       Top = 0
-      Width = 75
+      Width = 64
       Height = 25
       Caption = 'Available'
       TabOrder = 3
       OnClick = AvailableClick
     end
     object Run1: TButton
-      Left = 302
+      Left = 258
       Top = 0
-      Width = 75
+      Width = 64
       Height = 25
       Caption = 'RunStop'
       TabOrder = 4
@@ -98,22 +95,40 @@ object SideKick: TSideKick
     end
     object TrackAll: TButton
       Tag = 69
-      Left = 377
+      Left = 322
       Top = 0
-      Width = 75
+      Width = 64
       Height = 25
       Caption = 'List All'
       TabOrder = 5
-      OnClick = LoadClick
+      OnClick = btnLoadClick
     end
     object Show_Browser: TButton
-      Left = 452
+      Left = 386
       Top = 0
       Width = 75
       Height = 25
       Caption = 'Show_Browser'
       TabOrder = 6
       OnClick = Show_BrowserClick
+    end
+    object SaveSettings: TButton
+      Left = 461
+      Top = 0
+      Width = 75
+      Height = 25
+      Caption = 'SaveSettings'
+      TabOrder = 7
+      OnClick = SaveSettingsClick
+    end
+    object RestoreSettings: TButton
+      Left = 536
+      Top = 0
+      Width = 75
+      Height = 25
+      Caption = 'RestoreSettings'
+      TabOrder = 8
+      OnClick = RestoreSettingsClick
     end
   end
   object ChkLB: TCheckListBox
@@ -139,23 +154,13 @@ object SideKick: TSideKick
     ParentBackground = False
     TabOrder = 4
     StyleElements = [seBorder]
-    ExplicitWidth = 809
   end
-  object Memo1: TMemo
-    Left = 272
-    Top = 376
-    Width = 487
-    Height = 129
-    Lines.Strings = (
-      'E,C:\Windows\explorer.exe, 50'
-      
-        'D12,C:\Program Files (x86)\Embarcadero\Studio\23.0\bin\bds.exe, ' +
-        '100'
-      'Chrome,C:\Program Files\Google\Chrome\Application\chrome.exe,200'
-      'E,C:\Windows\explorer.exe, 0'
-      'Np++,C:\Program Files\Notepad++\notepad++.exe, 300'
-      'GE_Grep,C:\Users\aspha\GExperts\Binaries\GExpertsGrep.exe, 100')
+  object LogCSV: TMemo
+    Left = 0
+    Top = 513
+    Width = 815
+    Height = 319
+    Align = alClient
     TabOrder = 5
-    Visible = False
   end
 end
