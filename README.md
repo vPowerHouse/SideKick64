@@ -1,30 +1,27 @@
-SideKick64
-===========
+# SideKick64
+
 Quick navigation of programs running
 
 Reminiscent of Windows 3 Program Manager or old DOS programs like Borland's SideKick or Radio Shacks Desktop
 
 This sidekick directive is to collect and use the data availiable on local machine.
 
+<img src="SideKick64 2024-09-04.png"> Sk</img>
 
-![SideKick64](SideKick64 2024-09-04.png)
-
-#Shows All Apps Running
+## Shows All Apps Running
 
 Click on a row to show App in it's Desktop(1).
 
 Clicking on a App listed in the grid moves to that Desktop regardless of the Desktop(1)!
 
-Records when bad Windows when they poop out an error.
+Records when Windows error messages change.
 
-##Using SideKick64
+### Using SideKick64
 Launch and surface SK from IDE or Notepad++
 
-Add a return to SideKick64 app with configure __T__ools under the Tools menu
-Just browse for the SideKick.exe to set this up also Notepad++ in the Run menu has similar feature.
+Add a return to SideKick64 app with configure Tools under the Tools menu. Just browse for the SideKick.exe to set this up. Notepad++ in the Run menu has similar feature.
 
-
-##AppList Simply explained
+### AppList Simply explained
 
 AppList Updates the UI through timer events
 The UI can ChangeState Running Stopped gatherwindows
@@ -34,12 +31,11 @@ Hourage Time is reckoned by hour meter rounded to 3 demical places.
 GoodApps array of the Executables Classnames we want to track and navigate to.
 
 Records GetLastWinError
- Chrome_WidgetWin_1 err:Access is denied
+  Chrome_WidgetWin_1 err:Access is denied
 
 Compiling as 64 allows the icons and version numbers of 64bit windows. Also Windows like Copilot and TApplication show up when the more button is pressed.  The Less can weed out the extra window.
 
 My favorite is the shell task shows the task bar to see the time.  The battery is flat on my garden shed clock.
-
 
  NotePad++ shows Microsoft __ZWSP__ Edge when showing symbols blah!
    fix Tencoding setting to UTF8 for TFile to save
